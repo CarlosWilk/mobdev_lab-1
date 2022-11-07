@@ -15,10 +15,10 @@ const routes: Routes = [
             path: '',
             loadChildren: () => import('../characters/characters.module').then( m => m.CharactersPageModule)
           },
-          // {
-          //   path: ':id',
-          //   loadChildren: () => import('../film-details/film-details.module').then( m => m.FilmDetailsPageModule)
-          // }
+           {
+            path: ':id',
+            loadChildren: () => import('../character-details/character-details.module').then( m => m.CharacterDetailsPageModule)
+          }
         ]
       },
   {
@@ -60,7 +60,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/films',
+    redirectTo: '/tabs/characters',
     pathMatch: 'full'
   }
 ];
