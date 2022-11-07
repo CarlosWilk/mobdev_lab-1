@@ -1,0 +1,11 @@
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: npm i -g @ionic/cli
+    name: Installing Ionic 5 & Angular CLI 
+    command: 
+      npm i -D -E @angular/cli && npx --yes ionic serve
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 8100
+    onOpen: open-preview
